@@ -1,19 +1,17 @@
-
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { storageService } from '../services/storageService';
-import { Quote, QuoteStatus } from '../types';
+import { useNavigate } from 'react-router-dom';
+import { storageService } from '../services/storageService.ts';
+import { Quote, QuoteStatus } from '../types.ts';
 import { 
   Search, 
   Filter, 
-  MoreHorizontal, 
   Download, 
   Trash2, 
   Copy, 
   ChevronDown,
   Eye
 } from 'lucide-react';
-import { pdfService } from '../services/pdfService';
+import { pdfService } from '../services/pdfService.ts';
 
 const Quotes = () => {
   const navigate = useNavigate();
@@ -64,12 +62,12 @@ const Quotes = () => {
           <h1 className="text-2xl font-bold text-gray-900">Quotes</h1>
           <p className="text-gray-500">Manage and track all customer quotations.</p>
         </div>
-        <Link 
-          to="/create" 
+        <button 
+          onClick={() => navigate('/create')} 
           className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
         >
           Create Quote
-        </Link>
+        </button>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">

@@ -1,8 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { storageService } from '../services/storageService';
-import { Quote, QuoteStatus } from '../types';
+import { storageService } from '../services/storageService.ts';
+import { Quote, QuoteStatus } from '../types.ts';
 import { 
   DollarSign, 
   FileText, 

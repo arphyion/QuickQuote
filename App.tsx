@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { 
   LayoutDashboard, 
@@ -15,13 +14,13 @@ import {
   Search
 } from 'lucide-react';
 
-// Pages (will implement next)
-import Dashboard from './pages/Dashboard';
-import Quotes from './pages/Quotes';
-import CreateQuote from './pages/CreateQuote';
-import Products from './pages/Products';
-import SettingsPage from './pages/Settings';
-import Templates from './pages/Templates';
+// Pages
+import Dashboard from './pages/Dashboard.tsx';
+import Quotes from './pages/Quotes.tsx';
+import CreateQuote from './pages/CreateQuote.tsx';
+import Products from './pages/Products.tsx';
+import SettingsPage from './pages/Settings.tsx';
+import Templates from './pages/Templates.tsx';
 
 const SidebarItem = ({ to, icon: Icon, label, active }: { to: string, icon: any, label: string, active: boolean }) => (
   <Link
